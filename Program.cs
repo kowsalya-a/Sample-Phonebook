@@ -10,7 +10,7 @@ namespace Sample_Phonebook
 
          List<string> Contactname=new List<string>();
          List<int> Contactnumber=new List<int>();
-         Console.WriteLine("Enter your choice 1.Add 2.Display 3.Delete");
+         Console.WriteLine("Enter your choice 1.Add 2.Delete");
          int choice=Convert.ToInt32(Console.ReadLine());
          switch(choice)
          {
@@ -19,7 +19,7 @@ namespace Sample_Phonebook
                   break;
              
              case 2:
-                  Deletecontact(Contactname);
+                  Deletecontact(Contactname, Contactnumber);
                   break;
          }
         }
@@ -32,10 +32,13 @@ namespace Sample_Phonebook
             Contactnumber.Add(int.Parse(Console.ReadLine()));
         }
         
-        private static void Deletecontact(List<string> Contactname){
+        private static void Deletecontact(List<string> Contactname,List<int> Contactnumber){
             Console.WriteLine("Enter the name that u want to delete");
             string name=Console.ReadLine();
             Contactname.Remove(name);
+            Console.WriteLine("enter the number that u want to delete");
+            int number=int.Parse(Console.ReadLine());
+            Contactnumber.Remove(number);
         } 
         }
     }

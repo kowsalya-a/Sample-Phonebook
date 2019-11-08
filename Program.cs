@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections; 
 using System.Collections.Generic; 
-using contacts;
+using Contacts;
 
 namespace Sample_Phonebook
 {
@@ -12,20 +12,20 @@ namespace Sample_Phonebook
 
          List<string> Contactname=new List<string>();
          List<int> Contactnumber=new List<int>();
-         contact contacts=new contact();
+         Contact contacts=new Contact();
          Console.WriteLine("Enter your choice 1.Add 2.Delete 3.Search");
          int choice=Convert.ToInt32(Console.ReadLine());
          switch(choice)
          {
              case 1:
-                  contacts.addContact(Contactname, Contactnumber);
+                  contacts.AddContact(Contactname, Contactnumber);
                   break;
              
              case 2:
-                  contacts.Deletecontact(Contactname, Contactnumber);
+                  contacts.DeleteContact(Contactname, Contactnumber);
                   break;
              case 3:
-                  contacts.Searchcontact(Contactname, Contactnumber);
+                  contacts.SearchContact(Contactname, Contactnumber);
                   break;
          }
         }
